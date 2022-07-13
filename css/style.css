@@ -1,6 +1,7 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
 }
 /* for the header */
 header {
@@ -60,7 +61,7 @@ header {
 
 /* container 2 */
 
-li{
+.edit{
     margin-top: 1rem;
 }
 
@@ -201,7 +202,7 @@ li{
 
 
 .container-3 .container-3-bottom .narrow{
-    max-width: 700px;
+    max-width: 800px;
     margin: auto;
 }
 
@@ -288,6 +289,133 @@ li{
     width: 100%;
 }
 
+/* container 6 */
+.container-6{
+    height: 50vh;
+    background: #f8f8ff;
+    padding-top: 2rem;
+}
+.container-6 .container-6-top{
+    text-align: center;
+}
+
+.container-6 .container-6-bottom{
+    width: 98vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.container-6-bottom::before, .container-6-bottom::after{
+    position: absolute;
+    top: 0;
+    width: 10rem;
+    height: 100%;
+    content: '';
+    z-index: 1;
+}
+
+.container-6-bottom::before{
+    left: 0;
+    background: linear-gradient(to right, #fff 0%, transparent 100%);
+}
+
+.container-6-bottom::after{
+    right: 0;
+    background: linear-gradient(to left, #fff 0%, transparent 100%);    
+}
+
+
+
+.marquee-content{
+    display: flex;
+    gap: 3rem;
+    /* animation */
+    animation: scrolling 30s linear infinite;
+}
+/* animation beginning */
+@keyframes scrolling {
+    0%{transform: translate(0vw);}
+    100%{transform: translate(calc(-1*26vw*9));}
+}
+
+.marquee-content:hover{
+    animation-play-state:paused;
+}
+/* animation end */
+.marquee-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 26vw;
+    list-style: none;
+    background: #fff;
+    padding: 1rem;
+    white-space:wrap;
+}
+
+/* container 7 */
+
+.container-7{
+    background: rgba(0, 128, 0, .7);
+    height: 30vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.container-7::before{
+    position: absolute;
+    width: 50vw;
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: '';
+    background: linear-gradient(to right, #000 0%, transparent 100%);
+    z-index: 1;
+}
+
+.text-index-2{
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+}
+
+.sign-up{
+    padding: 1rem;
+    color: #000;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+/* container 8 */
+
+.container-8{
+    height: 10vh;
+    background: #000;
+    color: #fff;
+}
+
+.container-8-wrapper{
+    max-width: 90vw;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-8-wrapper .container-8-right i{
+        margin-left: 1rem;
+}
+
+
+
+
+
 
 
 
@@ -322,5 +450,10 @@ li{
 }
 
 .bold{
+    font-weight: bold;
+}
+
+.custom{
+    color: green;
     font-weight: bold;
 }
